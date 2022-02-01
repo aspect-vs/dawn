@@ -1,0 +1,6 @@
+/*!
+   * Serialize all form data into a SearchParams string
+   * (c) 2020 Chris Ferdinandi, MIT License, https://gomakethings.com
+   * @param  {Node}   form The form to serialize
+   * @return {String}      The serialized form data
+   */
