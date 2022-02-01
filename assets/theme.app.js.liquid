@@ -2294,7 +2294,7 @@
               u = "js-toggle-submenu",
               h = {},
               p = 1,
-              m = "",
+              m = "(min-width: " + theme.breakpoints.medium + "px)",
               v = window.matchMedia(m);
             function f() {
               v.matches && h.mobileNavContainer.classList.contains(c) && b();
@@ -4654,7 +4654,7 @@
               ie = "data-cart-item-title",
               ne = "data-cart-item-url",
               se = "data-quantity-item",
-              re = "";
+              re = "(min-width: " + theme.breakpoints.medium + "px)";
             function oe(e) {
               (this.container = e),
                 (this.thumbnails = this.container.querySelectorAll(V)),
@@ -5254,7 +5254,7 @@
           (theme.Filters = (function () {
             var e = {
                 mediaQueryMediumUp:
-                  "",
+                  "(min-width: " + theme.breakpoints.medium + "px)",
               },
               t = "#FilterTags",
               i = "#SortBy",
