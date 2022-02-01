@@ -1,0 +1,68 @@
+{% if request.path contains '/tools/recurring/portal' %}
+<!-- RetentionEngine Snippet: Start -->
+<script async="async" src='//bellwethragents.s3.amazonaws.com/js/embedded_experience.js'></script>
+<script defer="defer">
+(function() {
+  
+  function checkRechargePlusPage() {
+    let query = $('a').filter(function (index) {
+      return $(this).text().toUpperCase().trim() === 'Cancel Subscription'.toUpperCase();
+    });
+    if (query.length) {
+      let subscriptionId = query.data('rcData')['subscription_id'];
+      let newHref =
+        'https://app.bellwethr.com/offboard/experience/breo-box-5783265741?subscription_id=' + subscriptionId {% if customer %} + '&customer_ID={{customer.id}}' {% endif %};
+      query[0].href = 'javascript:void(0)';
+      query[0].onclick = function () {
+          openReModal(newHref);
+      };
+      query.attr('data-rc-modal', 'disable');
+    }
+  }
+  
+ function checkSubscriptionsPage() {
+  $(".rc_subscriptions__subscription__item").each(function() {
+  if ($(this).find(".rc_subscriptions__subscription__item__cancel > a").length) {
+   let oldHref = $(this).find(".rc_subscriptions__subscription__item__cancel > a")[0].href;
+   let subscriptionId = oldHref.match(new RegExp('subscriptions/' + "(.*)" + '/cancel'))[1];
+   let link = "https://app.bellwethr.com/offboard/experience/breo-box-5783265741?subscription_id=" + subscriptionId;
+   $(this).find(".rc_subscriptions__subscription__item__cancel > a")[0].href = "javascript:void(0)";
+   $(this).find(".rc_subscriptions__subscription__item__cancel > a")[0].onclick = 
+     function () {openReModal(link)}
+ }})}
+
+ function checkEditPage() {
+  if ($("#rc_subscriptions__items__cancel > a").length) {
+   let oldHref = $("#rc_subscriptions__items__cancel > a")[0].href;
+   let subscriptionId = oldHref.match(new RegExp('subscriptions/' + "(.*)" + '/cancel'))[1];
+   let link = "https://app.bellwethr.com/offboard/experience/breo-box-5783265741?subscription_id=" + subscriptionId;
+   $("#rc_subscriptions__items__cancel > a")[0].href = "javascript:void(0)";
+   $("#rc_subscriptions__items__cancel > a")[0].onclick = 
+     function () {openReModal(link)}
+  }}
+
+ function checkNovum() {
+  let cancelBtn = $('.rc_cancel-btn')[0];
+  if (!cancelBtn) return;
+  cancelBtn.removeEventListener("click", cancelSubscriptionFlow);
+  let subscriptionId = $(cancelBtn).data('id');
+  let link = "https://app.bellwethr.com/offboard/experience/breo-box-5783265741?subscription_id=" + subscriptionId;
+  let linkHtml = `<a href='javascript:void(0)' onclick='openReModal("${link}")'></a>`;
+  $(cancelBtn).wrap(linkHtml);
+ }
+
+ function letRechargeLoadjQuery() {
+   if (window.jQuery) {
+    buildEmbeddedExperience();
+    checkRechargePlusPage();
+    checkSubscriptionsPage();
+    checkEditPage();
+    checkNovum();
+   } else {
+    setTimeout(function() { letRechargeLoadjQuery() }, 50);
+  }}
+ letRechargeLoadjQuery();
+})();
+</script>
+<!-- RetentionEngine Snippet: End -->
+{% endif %}
