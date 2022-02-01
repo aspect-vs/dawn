@@ -1,5 +1,204 @@
 {
-  "current": "Default",
+  "current": {
+    "color_text": "#333333",
+    "color_body_text": "#333333",
+    "color_sale_text": "#c47171",
+    "color_button": "#c47171",
+    "color_small_button_text_border": "#818181",
+    "color_text_field_text": "#333333",
+    "color_image_overlay_text": "#333333",
+    "color_image_overlay": "#ffffff",
+    "image_overlay_opacity": 60,
+    "type_header_font": "montserrat_n7",
+    "type_header_base_size": 26,
+    "type_base_font": "muli_n4",
+    "type_base_size": 16,
+    "predictive_search_enabled": false,
+    "share_twitter": false,
+    "share_pinterest": false,
+    "social_facebook_link": "https:\/\/www.facebook.com\/breobox",
+    "social_instagram_link": "https:\/\/www.instagram.com\/breobox\/",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCcTWsC-Juspbh38c8XQ7brw",
+    "favicon": "shopify:\/\/shop_images\/breobox-icon.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/breo-logo-high-res_c7481be8-30c9-4b13-8d6e-758c320caf0d.png",
+    "checkout_accent_color": "#333333",
+    "checkout_button_color": "#c47171",
+    "checkout_error_color": "#c47171",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "align_logo": "left",
+          "logo": "shopify:\/\/shop_images\/breo-logo-high-res_09240123-e06b-464a-a1bc-5b2da0e301ab_1000x_2x_1.png",
+          "logo_max_width": 100,
+          "main_linklist": "main-menu",
+          "message": false,
+          "home_page_only": false,
+          "message_text": "Order by 12\/23 with Priority Overnight Service for delivery by Christmas",
+          "message_link": "https:\/\/www.breobox.com\/pages\/subscribe",
+          "color_bg": "#8f2425",
+          "color_text": "#ffffff"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "73d765a7-c3b0-4b2f-8914-62be5b6e8db3": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "menu": "main-menu"
+            }
+          },
+          "1d612c64-8063-4279-aa29-ee2052562706": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "menu": "footer-1"
+            }
+          },
+          "92dc6da5-9592-492d-9026-273b56dae960": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Never miss another deal"
+            }
+          }
+        },
+        "block_order": [
+          "73d765a7-c3b0-4b2f-8914-62be5b6e8db3",
+          "1d612c64-8063-4279-aa29-ee2052562706",
+          "92dc6da5-9592-492d-9026-273b56dae960"
+        ],
+        "settings": {
+          "show_payment_icons": false,
+          "color_footer_bg": "#f6f6f6",
+          "color_footer_text": "#333232",
+          "show_locale_selector": false,
+          "show_currency_selector": false
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": true,
+          "show_vendor": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You may also like",
+          "show_vendor": false
+        }
+      },
+      "breobox-gift": {
+        "type": "breobox-gift",
+        "settings": {
+        }
+      },
+      "breobox-past-boxes-slider": {
+        "type": "breobox-past-boxes-slider",
+        "settings": {
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_ajax_enable": true,
+          "cart_notes_enable": true
+        }
+      },
+      "breobox-pastboxes": {
+        "type": "breobox-pastboxes",
+        "settings": {
+          "cta_url": "shopify:\/\/pages\/subscribe",
+          "quiz_url": "https:\/\/breobox.typeform.com\/to\/BtXGxzGK"
+        }
+      },
+      "breobox-subscribe": {
+        "type": "breobox-subscribe",
+        "settings": {
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "layout": "grid",
+          "blog_show_author": false,
+          "blog_show_date": true
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "display_type": "all",
+          "sort": "alphabetical",
+          "grid": 3
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 4,
+          "show_collection_image": false,
+          "show_vendor": false,
+          "sort_enable": true,
+          "tags_enable": false
+        }
+      },
+      "breobox-reviews": {
+        "type": "breobox-reviews",
+        "settings": {
+        }
+      },
+      "breobox-awards": {
+        "type": "breobox-awards",
+        "settings": {
+        }
+      },
+      "breobox-elfsight-instagram": {
+        "type": "breobox-elfsight-instagram",
+        "settings": {
+        }
+      },
+      "breobox-faq-hp": {
+        "type": "breobox-faq-hp",
+        "settings": {
+        }
+      },
+      "breobox-current-box-fa21": {
+        "type": "breobox-current-box-fa21",
+        "settings": {
+        }
+      },
+      "breobox-reviews-testimonials": {
+        "type": "breobox-reviews-testimonials",
+        "settings": {
+        }
+      },
+      "breobox-press": {
+        "type": "breobox-press",
+        "settings": {
+        }
+      },
+      "breobox-current-box-w21": {
+        "type": "breobox-current-box-w21",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
     "Default": {
       "colors_solid_button_labels": "#FFFFFF",

@@ -880,6 +880,23 @@
         }
       }
     },
+    "discover-bar": {
+      "name": "Gray bar (ex. below slider",
+      "settings": {
+        "text_alignment": {
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+          "label": "Desktop content alignment"
+        }
+      }
+    },
     "image-banner": {
       "name": "Image banner",
       "settings": {

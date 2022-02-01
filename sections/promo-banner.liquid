@@ -1,0 +1,50 @@
+<section class="promo-banner">
+    <video autoplay muted loop playsinline>
+        <source src="{{ 'valentine.mp4' | asset_url }}" type="video/mp4">
+    </video>
+    <div class="pb-bg-overlay home">
+        <h1>{{ section.settings.main_heading }}</h1>
+        <h3 style="font-size:1.15rem;">We've got Valentine’s Day covered</h3>
+        <div class="pb-grid">
+            <div class="grid-item value">
+                <div class="coupon">
+                    <span>$89 value</span>
+                    <h3>Free Gift(s) w/ Box</h3>
+                </div>
+                <p>Promo Code: <strong>LOVEGIFT</strong></p>
+            </div>
+            <div class="grid-item or">
+                <div class="pb-vl"></div>
+                <div><h3>OR</h3></div>
+                <div class="pb-vl"></div>
+            </div>
+            <div class="grid-item">
+                <div class="coupon">
+                    <h3>$35 OFF</h3>
+                </div>
+                <p>Promo Code: <strong>LOVE35</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Promo banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main heading",
+      "default": "Ditch the chocolates."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promo banner"
+    }
+  ]
+}
+{% endschema %}
